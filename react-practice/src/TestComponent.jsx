@@ -7,6 +7,12 @@
 
 // export default TestComponent;
 
+const name = "Joinal";
 export default function TestComponent() {
-  return <h1> First Component</h1>;
+  return (
+    <>
+      <h1> First Component</h1>
+      <p>My name is {name}</p>
+    </>
+  );
 }
