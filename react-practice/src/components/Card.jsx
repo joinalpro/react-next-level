@@ -1,42 +1,21 @@
+import { useState } from "react";
 import "./Card.css";
 
-// export default function Card({ name, age }) {
-//   //   if (age < 18) {
-//   //     return <div className="card">You are under age.</div>;
-//   //   }
-//   return (
-//     <>
-//       {age > 18 && (
-//         <div className="card">
-//           <p>First Name: {name}</p>
-//           <p>Age: {age}</p>
-//         </div>
-//       )}
-//       {age < 18 && (
-//         <div className="card">
-//           <p>You are too young</p>
-//         </div>
-//       )}
-//     </>
-//   );
-// }
+// 1. Must use in the top level of Component
+// 2. Must use inside react Component
 
 export default function Card({ name, age }) {
-  //   if (age < 18) {
-  //     return <div className="card">You are under age.</div>;
-  //   }
+  const [member, setMember] = useState("");
+
+  const clickHandler = (memberName) => {
+    setMember(memberName);
+  };
+  console.log(member);
   return (
-    <>
-      {age > 18 ? (
-        <div className="card">
-          <p>First Name: {name}</p>
-          <p>Age: {age}</p>
-        </div>
-      ) : (
-        <div className="card">
-          <p>You are too young</p>
-        </div>
-      )}
-    </>
+    <div onClick={() => clickHandler(name)} className="card">
+      <p>First Name: {name} </p>
+      <p>Age: {age}</p>
+      {member && <p>Greetings {member}</p> }
+    </div>
   );
 }

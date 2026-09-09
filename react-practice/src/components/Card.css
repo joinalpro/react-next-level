@@ -4,3 +4,15 @@
   margin: 16px 0px;
   border-radius: 4px;
 }
+.card-blue {
+  background-color: rgba(47, 58, 213, 0.43);
+  padding: 16px;
+  margin: 16px 0px;
+  border-radius: 4px;
+}
+.card-orange {
+  background-color: rgba(220, 135, 38, 0.43);
+  padding: 16px;
+  margin: 16px 0px;
+  border-radius: 4px;
+}
